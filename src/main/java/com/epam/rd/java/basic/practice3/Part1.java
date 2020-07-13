@@ -3,7 +3,8 @@ package com.epam.rd.java.basic.practice3;
 public class Part1 {
 
     public static void main(String[] args) {
-        
+        //just my empty main class
+
     }
 
     public static String convert1(String input) {

@@ -3,7 +3,8 @@ package com.epam.rd.java.basic.practice3;
 public class Part5 {
 
     public static void main(String[] args) {
-        
+        //just my empty main class
+
     }
 
     public static String decimal2Roman(int dec) {
