@@ -4,7 +4,7 @@ public class Part5 {
 
     public static void main(String[] args) {
         //just my empty main class
-        System.out.println(decimal2Roman(42));
+        System.out.println(roman2Decimal("XVII"));
     }
 
     public static String decimal2Roman(int dec) {
@@ -35,7 +35,22 @@ public class Part5 {
     }
 
     public static int roman2Decimal(String roman) {
-        return 0;
+        if (roman.length() == 0) {
+            return 0;
+        }
+        int result = 0;
+        int prevNumber = roman2Decimal(roman.charAt(0));
+        for (int i = 1; i < roman.length(); i++) {
+            int number = roman2Decimal(roman.charAt(i));
+            if (number <= prevNumber) {
+                result += prevNumber;
+            } else {
+                result -= prevNumber;
+            }
+                prevNumber = number;
+        }
+        result += prevNumber;
+        return result;
     }
 
 
