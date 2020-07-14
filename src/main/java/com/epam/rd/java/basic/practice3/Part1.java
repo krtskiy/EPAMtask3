@@ -1,6 +1,5 @@
 package com.epam.rd.java.basic.practice3;
 
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Part1 {
@@ -8,27 +7,23 @@ public class Part1 {
     public static void main(String[] args) {
         //just my empty main class
 
-        System.out.print(convert1(input));
+        System.out.print(convert2(input));
     }
 
     static String input = Util.getInput("part1.txt");
 
     public static String convert1(String input) {
-//        String regex1 = "\\s([a-z]+|[а-я]+)|(\\b([a-z]+)@(google|mail)\\.([a-z]+))";
-//        String regex1 = ";[A-Z].+;|;[а-я].+;|[A-Z].+\\s";
-        String regex1 = "^[A-Z][a-z]+;[A-Z][a-z]+;[A-Z][a-z]+\\s";  // убирает первую строку
+        String regex1 = "^[A-Z][a-z]+;[A-Z][a-z]+;[A-Z][a-z]+\\s";
         Pattern p1 = Pattern.compile(regex1);
         StringBuilder str = new StringBuilder();
-        String[] test = p1.split(input);
-        for (int i = 0; i < test.length; i++) {
-            str.append(test[i]);
+        String[] inputWithoutFirst = p1.split(input);
+        for (int i = 0; i < inputWithoutFirst.length; i++) {
+            str.append(inputWithoutFirst[i]);
         }
         String str1 = str.toString();
         String regex2 = ";[^;]*;";
-        Pattern p2 = Pattern.compile(regex2);
         str1 = str1.replaceAll(regex2, ": ");
         String regex3 = "$";
-        Pattern p3 = Pattern.compile(regex3);
         str1 = str1.replaceAll(regex3, "\n");
         return str1;
     }
