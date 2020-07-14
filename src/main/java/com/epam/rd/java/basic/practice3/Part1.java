@@ -8,7 +8,7 @@ public class Part1 {
     public static void main(String[] args) {
         //just my empty main class
 
-        System.out.print(convert1(input));
+        System.out.println(convert1(input));
     }
 
     static String input = Util.getInput("part1.txt");
