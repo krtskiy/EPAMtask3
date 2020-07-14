@@ -8,7 +8,7 @@ public class Part1 {
     public static void main(String[] args) {
         //just my empty main class
 
-        System.out.println(convert1(input));
+        System.out.print(convert1(input));
     }
 
     static String input = Util.getInput("part1.txt");
@@ -27,6 +27,9 @@ public class Part1 {
         String regex2 = ";[^;]*;";
         Pattern p2 = Pattern.compile(regex2);
         str1 = str1.replaceAll(regex2, ": ");
+        String regex3 = "$";
+        Pattern p3 = Pattern.compile(regex3);
+        str1 = str1.replaceAll(regex3, "\n");
         return str1;
     }
 
