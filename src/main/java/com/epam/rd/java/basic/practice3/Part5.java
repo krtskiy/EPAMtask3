@@ -4,7 +4,6 @@ public class Part5 {
 
     public static void main(String[] args) {
         //just my empty main class
-        System.out.println(roman2Decimal("XVII"));
     }
 
     public static String decimal2Roman(int dec) {

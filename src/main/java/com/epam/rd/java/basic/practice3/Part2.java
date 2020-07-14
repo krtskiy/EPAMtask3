@@ -7,7 +7,7 @@ public class Part2 {
 
     public static void main(String[] args) {
         //just my empty main class
-        System.out.println(convert(input));
+
     }
 
     static String input = Util.getInput("part2.txt");
@@ -15,10 +15,9 @@ public class Part2 {
         StringBuilder str = new StringBuilder();
         Pattern pattern = Pattern.compile("\\b[A-Za-z]\\b");
         Matcher matcher = pattern.matcher(input);
-        String[] test = new String[]{};
-//        while (matcher.find()) {
-//            str.append(input.substring(matcher.start(), matcher.end()));
-//        }
+        while (matcher.find()) {
+            str.append(input.substring(matcher.start(), matcher.end()));
+        }
 
 
         return null;

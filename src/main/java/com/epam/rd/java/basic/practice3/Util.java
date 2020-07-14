@@ -21,7 +21,7 @@ public class Util {
     }
 
     public static void main(String[] args) {
-        String input = Util.getInput("part1.txt");
-        System.out.println(input);
+        // just my empty main class
+
     }
 }
