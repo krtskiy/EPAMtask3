@@ -6,11 +6,9 @@ import java.util.Arrays;
 
 public class Part4 {
 
-    public static void main(String[] args) throws NoSuchAlgorithmException {
+    public static void main(String[] args) {
         //just my empty main class
-        System.out.println(hash("asdf", "MD5"));
 
-        System.out.println(hash("asdf", "SHA-256"));
     }
 
     public static String hash(String input, String algorithm) throws NoSuchAlgorithmException {
