@@ -2,7 +2,6 @@ package com.epam.rd.java.basic.practice3;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
 
 public class Part4 {
 
@@ -23,6 +22,6 @@ public class Part4 {
             }
             sb.append(hex);
         }
-        return sb.toString();
+        return sb.toString().toUpperCase();
     }
 }
