@@ -58,7 +58,9 @@ public class Part1 {
         for (int i = 0, j = 1; i < strArr.length; i++, j++) {
             str = str.append(strArr[i]).append(' ').append(emails[j]);
         }
-        return str.toString();
+        String result = str.toString();
+        result = result.replaceAll("$", "\n");
+        return result;
     }
 
     public static String convert3(String input) {
