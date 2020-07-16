@@ -13,7 +13,6 @@ public class Part3 {
     static String input = Util.getInput("part3.txt");
 
     public static String convert(String input) {
-        String newLine = System.lineSeparator();
         StringBuilder str = new StringBuilder();
         char[] ch;
         char tempFirstChar;
@@ -42,7 +41,6 @@ public class Part3 {
         for (int i = 0; i < temp.length; i++) {
             str.append(temp[i]);
         }
-        String result = str.toString();
-        return result;
+        return str.toString();
     }
 }
