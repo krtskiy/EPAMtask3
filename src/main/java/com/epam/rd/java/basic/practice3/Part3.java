@@ -21,11 +21,11 @@ public class Part3 {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
         while (matcher.find()) {
-            sb.append(matcher.group()).append(' ');
+            sb.append(matcher.group());
         }
         String s = input;
-        String[] temp = s.split("\\s");
-        for (int i = 0; i < temp.length; i++) {
+        String[] temp = s.split("\\b");
+        for (int i = 0; i < temp.length; i = i + 2) {
             if (temp[i].length() >= 3) {
                 tempFirstChar = temp[i].charAt(0);
                 if (Character.isUpperCase(tempFirstChar)) {
@@ -40,11 +40,9 @@ public class Part3 {
             }
         }
         for (int i = 0; i < temp.length; i++) {
-            str.append(temp[i]).append(' ');
+            str.append(temp[i]);
         }
         String result = str.toString();
-        result = result.replaceAll("\\s$", "");
-        result = result.replaceAll("\\s\\s", newLine);
         return result;
     }
 }
