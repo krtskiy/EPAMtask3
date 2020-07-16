@@ -13,6 +13,7 @@ public class Part3 {
     static String input = Util.getInput("part3.txt");
 
     public static String convert(String input) {
+        String newLine = System.lineSeparator();
         StringBuilder str = new StringBuilder();
         char[] ch;
         char tempFirstChar;
@@ -43,7 +44,7 @@ public class Part3 {
         }
         String result = str.toString();
         result = result.replaceAll("\\s$", "");
-        result = result.replaceAll("\\s\\s", "\n");
+        result = result.replaceAll("\\s\\s", newLine);
         return result;
     }
 }
