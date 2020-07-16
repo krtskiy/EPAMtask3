@@ -7,7 +7,6 @@ public class Part3 {
 
     public static void main(String[] args) {
         //just my empty main class
-        System.out.println(convert(input));
     }
 
     static String regex = "([\\wА-Яа-я]{3,})";
