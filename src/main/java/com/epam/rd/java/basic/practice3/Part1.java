@@ -7,7 +7,6 @@ public class Part1 {
 
     public static void main(String[] args) {
         //just my empty main class
-        System.out.println(convert3(input));
 
     }
 
