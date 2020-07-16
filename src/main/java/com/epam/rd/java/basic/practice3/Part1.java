@@ -116,7 +116,7 @@ public class Part1 {
                     x = x + 1000;
                 }
                 users[i] = users[i] + ';' + x;
-                sb = sb.append(users[i]);
+                sb = sb.append(users[i]).append('\n');
             }
         }
         return sb.toString();
