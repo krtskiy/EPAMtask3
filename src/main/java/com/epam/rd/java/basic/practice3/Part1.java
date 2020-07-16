@@ -1,5 +1,6 @@
 package com.epam.rd.java.basic.practice3;
 
+import java.security.SecureRandom;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -7,7 +8,7 @@ public class Part1 {
 
     public static void main(String[] args) {
         //just my empty main class
-        System.out.println(convert3(input));
+        System.out.println(convert4(input));
 
     }
 
@@ -83,8 +84,8 @@ public class Part1 {
         for (int i = 0; i < users.length; i++) {
             if (users[i].contains("mail.com")) {
                 if (addComa1) {
-                sbMail.append(logins[i]).append(", ");
-                addComa1 = false;
+                    sbMail.append(logins[i]).append(", ");
+                    addComa1 = false;
                 } else {
                     sbMail.append(logins[i]);
                 }
@@ -101,6 +102,23 @@ public class Part1 {
     }
 
     public static String convert4(String input) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        String pswd = ";Password";
+        String[] users = input.split("((?<=\\w\\w\\w\\w\\w;\\w\\w\\w\\w;\\w\\w\\w\\w\\w)\\s)|((?<=com)\\s)");
+        users[0] = users[0] + pswd;
+        for (int i = 0; i < users.length; i++) {
+            if (i == 0) {
+                sb = sb.append(users[i]);
+            } else {
+                SecureRandom r = new SecureRandom();
+                int x = r.nextInt(10000);
+                if (x < 1000) {
+                    x = x + 1000;
+                }
+                users[i] = users[i] + ';' + x;
+                sb = sb.append(users[i]);
+            }
+        }
+        return sb.toString();
     }
 }
