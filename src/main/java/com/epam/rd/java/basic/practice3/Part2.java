@@ -76,7 +76,6 @@ public class Part2 {
                 }
             }
         }
-        String result = (strMin.append('\n').append(strMax)).toString();
-        return result;
+        return (strMin.append('\n').append(strMax)).toString();
     }
 }

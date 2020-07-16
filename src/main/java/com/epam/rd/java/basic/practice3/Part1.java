@@ -7,7 +7,7 @@ public class Part1 {
 
     public static void main(String[] args) {
         //just my empty main class
-
+        convert3(input);
 
     }
 
@@ -66,6 +66,10 @@ public class Part1 {
     }
 
     public static String convert3(String input) {
+        StringBuilder str = new StringBuilder();
+        String regex1 = "(^\\w+;\\w+;\\w+\\s)";
+        input = input.replaceAll(regex1, "");
+        System.out.println(input);
         return null;
     }
 
