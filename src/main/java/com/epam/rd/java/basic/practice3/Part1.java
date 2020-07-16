@@ -7,7 +7,6 @@ public class Part1 {
 
     public static void main(String[] args) {
         //just my empty main class
-        convert2(input);
     }
 
     static String input = Util.getInput("part1.txt");
@@ -29,8 +28,10 @@ public class Part1 {
     }
 
     public static String convert2(String input) {
+        int index = 0;
+        String[] strArr = new String[4];
+        StringBuilder test = new StringBuilder();
         StringBuilder str = new StringBuilder();
-//        String regex1 = "(^\\w+;\\w+;\\w+\\s)|((?<=\\s)[a-zа-я]+)|([A-ZА-Я][a-zа-я]+(?=\\s))|((?<=\\s)[A-ZА-Я][a-zа-я]+)|((?<=;)[a-zа-я]+@[a-zа-я]+\\.[a-zа-я]+)";
         String regex1 = "(^\\w+;\\w+;\\w+\\s)";
         input = input.replaceAll(regex1, "");
         String regex2 = "((?<=\\s)[a-zа-я]+;)";
@@ -41,8 +42,23 @@ public class Part1 {
         input = input.replaceAll(regex4, ".com)");
         String regex5 = "^\\s";
         input = input.replaceAll(regex5, "");
-        System.out.println(input);
-        return null;
+        String regex6 = "[\\wа-яА-Я]+\\s[\\wа-яА-Я]+\\s";
+        String regex7 = "([\\wа-яА-Я]+(?=\\s[\\wа-яА-Я]))";
+        String regex8 = "((?<=\\s)[\\wа-яА-Я]+(?=\\s\\())";
+        Pattern p1 = Pattern.compile(regex8);
+        Matcher m1 = p1.matcher(input);
+        Pattern p2 = Pattern.compile(regex7);
+        Matcher m2 = p2.matcher(input);
+        while (m1.find() && m2.find()) {
+            test.append(m1.group());
+            strArr[index] = m1.group() + " " + m2.group();
+            index++;
+        }
+        String[] emails = input.split(regex6);
+        for (int i = 0, j = 1; i < strArr.length; i++, j++) {
+            str = str.append(strArr[i]).append(' ').append(emails[j]);
+        }
+        return str.toString();
     }
 
     public static String convert3(String input) {
