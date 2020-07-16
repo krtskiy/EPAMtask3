@@ -40,12 +40,14 @@ public class Part3 {
             }
         }
         for (int i = 0; i < temp.length; i++) {
-            str.append(temp[i]).append(" ");
+            str.append(temp[i]).append(' ');
         }
         String result = str.toString();
-        result = result.replaceAll(".$", "");
-        result = result.replaceAll("\\s{2}", "\n" +
-                "\n");
+        result = result.replaceAll("\\s(?=\\s)", "");
+        result = result.replaceAll("\\s$", "");
+//        result = result.replaceAll("\\s{2}", "\n" +
+//                "\n" +
+//                "    ");
         return result;
     }
 }
