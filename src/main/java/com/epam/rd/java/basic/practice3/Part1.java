@@ -7,6 +7,8 @@ public class Part1 {
 
     public static void main(String[] args) {
         //just my empty main class
+
+
     }
 
     static String input = Util.getInput("part1.txt");
