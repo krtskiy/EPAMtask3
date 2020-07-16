@@ -43,8 +43,9 @@ public class Part3 {
             str.append(temp[i]).append(" ");
         }
         String result = str.toString();
-        result = result.replaceAll("\\s{2}", "\r\n");
-        result = result.replaceAll("\\s$", "");
+        result = result.replaceAll("\\s{2}", "\n" +
+                "\n");
+//        result = result.replaceAll("\\s$", "");
         return result;
     }
 }
