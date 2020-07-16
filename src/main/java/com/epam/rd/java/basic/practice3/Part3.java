@@ -7,6 +7,7 @@ public class Part3 {
 
     public static void main(String[] args) {
         //just my empty main class
+        System.out.println(convert(input));
     }
 
     static String regex = "([\\wА-Яа-я]{3,})";
@@ -42,9 +43,9 @@ public class Part3 {
             str.append(temp[i]).append(" ");
         }
         String result = str.toString();
+        result = result.replaceAll(".$", "");
         result = result.replaceAll("\\s{2}", "\n" +
                 "\n");
-        result = result.replaceAll("\\s$", "");
         return result;
     }
 }
