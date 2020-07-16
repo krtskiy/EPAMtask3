@@ -7,7 +7,7 @@ public class Part1 {
 
     public static void main(String[] args) {
         //just my empty main class
-        convert3(input);
+        System.out.println(convert3(input));
 
     }
 
@@ -66,11 +66,38 @@ public class Part1 {
     }
 
     public static String convert3(String input) {
-        StringBuilder str = new StringBuilder();
-        String regex1 = "(^\\w+;\\w+;\\w+\\s)";
-        input = input.replaceAll(regex1, "");
-        System.out.println(input);
-        return null;
+        boolean addComa1 = true;
+        boolean addComa2 = true;
+        StringBuilder sbMail = new StringBuilder("mail.com ==> ");
+        StringBuilder sbGoogle = new StringBuilder("google.com ==> ");
+        int index = 0;
+        String[] logins = new String[4];
+        input = input.replaceAll("(^\\w+;\\w+;\\w+\\s)", "");
+        String[] users = input.split("(?<=com)\\s");
+        Pattern p = Pattern.compile("\\b[a-zа-я]+\\b(?=;)");
+        Matcher m = p.matcher(input);
+        while (m.find()) {
+            logins[index] = m.group();
+            index++;
+        }
+        for (int i = 0; i < users.length; i++) {
+            if (users[i].contains("mail.com")) {
+                if (addComa1) {
+                sbMail.append(logins[i]).append(", ");
+                addComa1 = false;
+                } else {
+                    sbMail.append(logins[i]);
+                }
+            } else if (users[i].contains("google.com")) {
+                if (addComa2) {
+                    sbGoogle.append(logins[i]).append(", ");
+                    addComa2 = false;
+                } else {
+                    sbGoogle.append(logins[i]);
+                }
+            }
+        }
+        return sbMail.append('\n').append(sbGoogle).toString();
     }
 
     public static String convert4(String input) {

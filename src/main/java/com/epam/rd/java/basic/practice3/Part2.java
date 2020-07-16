@@ -76,6 +76,6 @@ public class Part2 {
                 }
             }
         }
-        return (strMin.append('\n').append(strMax)).toString();
+        return strMin.append('\n').append(strMax).toString();
     }
 }
