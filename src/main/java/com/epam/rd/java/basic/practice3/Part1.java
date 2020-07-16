@@ -7,6 +7,7 @@ public class Part1 {
 
     public static void main(String[] args) {
         //just my empty main class
+        System.out.println(convert3(input));
 
     }
 
@@ -96,7 +97,7 @@ public class Part1 {
                 }
             }
         }
-        return sbMail.append('\n').append(sbGoogle).toString();
+        return sbMail.append('\n').append(sbGoogle).append('\n').toString();
     }
 
     public static String convert4(String input) {
