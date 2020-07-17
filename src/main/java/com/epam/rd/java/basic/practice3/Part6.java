@@ -34,7 +34,7 @@ public class Part6 {
             sb.append(temp[i]);
         }
         String tempStr = sb.toString();
-        tempStr = tempStr.replaceAll("__", "_");
+        tempStr = tempStr.replaceAll("_{1,}", "_");
         return tempStr;
     }
 }
