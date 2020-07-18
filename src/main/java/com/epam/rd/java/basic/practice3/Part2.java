@@ -32,6 +32,8 @@ public class Part2 {
         int smallLength = 0;
         int largeLength = 0;
         small = large = words[0];
+        smallLength = small.length();
+        largeLength = large.length();
         for (int i = 0; i < size; i++) {
             if (small.length() > words[i].length()) {
                 small = words[i];
