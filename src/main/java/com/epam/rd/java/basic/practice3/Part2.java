@@ -7,7 +7,6 @@ public class Part2 {
 
     public static void main(String[] args) {
         //just my empty main class
-        convert(input);
     }
 
     static String input = Util.getInput("part2.txt");
@@ -17,8 +16,8 @@ public class Part2 {
         int indexSmall = 0;
         String[] arrLarge = new String[50];
         String[] arrSmall = new String[50];
-        StringBuilder sbLarge = new StringBuilder("Min: ");
-        StringBuilder sbSmall = new StringBuilder("Max: ");
+        StringBuilder sbLarge = new StringBuilder("Max: ");
+        StringBuilder sbSmall = new StringBuilder("Min: ");
         int size = 0;
         String[] words = new String[input.length()];
         String regex = "\\b\\w+?\\b";
