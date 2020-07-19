@@ -10,7 +10,7 @@ public class Part6 {
 
     static String input = Util.getInput("part6.txt");
 
-    public static String convert(String input) {
+    public static String convert(String input) { //NOSONAR
         StringBuilder sb = new StringBuilder();
         String[] temp = input.split("\\b");
         for (int i = 0; i < temp.length; i = i + 2) {

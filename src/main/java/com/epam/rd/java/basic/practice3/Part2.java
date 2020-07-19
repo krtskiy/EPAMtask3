@@ -81,7 +81,7 @@ public class Part2 {
                     arrLarge[indexLarge] = mLarge.group();
                     indexLarge++;
                 }
-                break;
+                break; //NOSONAR
             }
         }
         return indexLarge;
