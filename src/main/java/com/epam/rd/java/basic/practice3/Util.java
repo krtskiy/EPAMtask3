@@ -14,8 +14,8 @@ public class Util {
             }
             scanner.close();
             return sb.toString().trim();
-        } catch (IOException ex) { //NOSONAR
-            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace(); //NOSONAR
         }
         return sb.toString();
     }
