@@ -21,7 +21,6 @@ public class Util {
     }
 
     public static void main(String[] args) {
-        // just my empty main class
-
+        // just my empty main method
     }
 }

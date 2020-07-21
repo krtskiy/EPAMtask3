@@ -5,7 +5,7 @@ package com.epam.rd.java.basic.practice3;
 public class Part6 {
 
     public static void main(String[] args) {
-        //just my empty main class
+        //just my empty main method
     }
 
     static String input = Util.getInput("part6.txt");

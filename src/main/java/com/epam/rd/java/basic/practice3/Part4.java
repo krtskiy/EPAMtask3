@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 public class Part4 {
 
     public static void main(String[] args) {
-        //just my empty main class
+        //just my empty main method
 
     }
 

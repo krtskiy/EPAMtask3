@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class Part2 {
 
     public static void main(String[] args) {
-        //just my empty main class
+        //just my empty main method
     }
 
     static String input = Util.getInput("part2.txt");

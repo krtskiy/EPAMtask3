@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class Part1 {
 
     public static void main(String[] args) {
-        //just my empty main class
+        //just my empty main method
 
     }
 
